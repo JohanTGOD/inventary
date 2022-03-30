@@ -1,9 +1,11 @@
 from django.urls import path
 from . import views
 
+app_name="users"
 urlpatterns = [
     path("",views.index, name="index"),
-    path("<int:user_id>/",views.user, name="user"),
-    path("<int:user_id>/information/",views.information, name="information"),
-    path("<int:identification_id>/create/",views.createIdentificationNumber, name="create")
+    path("people/<int:people_id>",views.people, name="people"),
+    path("createpeople/",views.form, name="form"),
+    path("peoplecreated/",views.peopleFormResult, name="peopleFormResult"),
+    path("<int:identification_id>/create/",views.createIdentificationNumber, name="createIdentificationNumber")
 ]

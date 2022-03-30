@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventary information</title>
+</head>
+<body>
+    <table>
+        <tr>
+          <th>Nombre del Producto</th>
+          <th>Descripción</th> 
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Garantia</th>
+          <th>Fecha de llegada</th>
+          <th>Categoria</th>
+          <th>Proveedor</th>
+          <th>Estado de producto</th>
+        </tr>
+        {% for current_product in all_products %}
+        <tr>
+          <td>{{current_product.name}}</td>
+          <td>{{current_product.description}}</td>
+          <td>{{current_product.price}}</td>
+          <td>{{current_product.cuanity}}</td>
+          <td>{{current_product.warranty}}</td>
+          <td>{{current_product.date_arrival}}</td>
+          <td>{{current_product.category}}</td>
+          <td>{{current_product.supplier}}</td>
+          <td>{{current_product.state_product}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+</body>
+</html>

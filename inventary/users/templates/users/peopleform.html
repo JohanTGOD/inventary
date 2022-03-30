@@ -1,0 +1,33 @@
+<form action="{% url 'users:peopleFormResult' %}" method="post">
+{% csrf_token %}
+<fieldset>
+    <legend><h1> Create a new person</h1></legend>
+    <label for="first_name_label">First Name:</label>
+    <input type="text" id="first_name_id" name="first_name" required> </input>
+</br>
+    <label for="last_name_label">Last Name:</label>
+    <input type="text" id="last_name_id" name="last_name" required> </input>
+</br>
+<!--    <label for="age_label">Age:</label>
+    <input type="text" id="age_id" name="age" required> </input>
+</br>-->
+    <label for="email_label">Email:</label>
+    <input type="text" id="email_id" name="email" required> </input>
+</br>
+    <label for="address_label">Address:</label>
+    <input type="text" id="address_id" name="address" required> </input>
+</br>
+    <label for="cellphone_label">Cellphone:</label>
+    <input type="text" id="cellphone_id" name="cellphone" required> </input>
+</br>
+    <label for="identification_number_label">identificatoin_number:</label>
+    <input type="text" id="identication_number_id" name="identication_number" required> </input>
+</br>
+<!--
+<label for="identification_type_label">identification_type:</label>
+<input type="text" id="identication_type_id" name="identication_type" required> </input>
+-->
+    
+</fieldset>
+<input type="submit" value="Enviar"></input>
+</form>
