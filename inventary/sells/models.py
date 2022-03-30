@@ -12,10 +12,10 @@ class PaymentType(models.Model):
 
 class Sell(models.Model):
     date_sell = models.DateTimeField(auto_now_add=True)
-    client = models.ForeignKey(Client, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    payment_type = models.ForeignKey(PaymentType, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    client = models.ForeignKey(Client, on_delete=models.PROTECT)
+    product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    payment_type = models.ForeignKey(PaymentType, on_delete=models.PROTECT)
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
 
     def __str__(self):
         return str(self.product)+str(self.date_sell)

@@ -20,7 +20,7 @@ class Supplier(models.Model):
     name = models.CharField(max_length=45)
     cellphone = models.CharField(max_length=15)
     address = models.CharField(max_length=70)
-    identification_type = models.ForeignKey(IdentificationType, on_delete=models.CASCADE)
+    identification_type = models.ForeignKey(IdentificationType, on_delete=models.PROTECT)
     identification_number = models.CharField(max_length=20)
     
     def __str__(self):
@@ -30,13 +30,13 @@ class Supplier(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=255)
-    price = models.IntegerField
-    cuanity = models.IntegerField
-    warranty = models.IntegerField
+    price = models.IntegerField()
+    cuanity = models.IntegerField()
+    warranty = models.IntegerField()
     date_arrival = models.DateTimeField(auto_now_add=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE)
-    state_product = models.ForeignKey(StateProduct, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.PROTECT)
+    supplier = models.ForeignKey(Supplier, on_delete=models.PROTECT)
+    state_product = models.ForeignKey(StateProduct, on_delete=models.PROTECT)
 
     def __str__(self):
         return self.name
