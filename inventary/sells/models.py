@@ -18,4 +18,4 @@ class Sell(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
 
     def __str__(self):
-        return str(self.product)+str(self.date_sell)
+        return str(self.product)
