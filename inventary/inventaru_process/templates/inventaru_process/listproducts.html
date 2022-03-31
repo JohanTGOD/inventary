@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inventaru_process/style.css' %}">
+
     <title>Inventary information</title>
 </head>
 <body>
-    <table>
+    <table id="customers">
         <tr>
           <th>Nombre del Producto</th>
           <th>Descripción</th> 
