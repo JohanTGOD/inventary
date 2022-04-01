@@ -7,5 +7,4 @@ urlpatterns = [
     path("people/<int:people_id>",views.people, name="people"),
     path("createpeople/",views.form, name="form"),
     path("peoplecreated/",views.peopleFormResult, name="peopleFormResult"),
-    path("<int:identification_id>/create/",views.createIdentificationNumber, name="createIdentificationNumber")
 ]

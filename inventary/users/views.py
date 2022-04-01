@@ -1,5 +1,4 @@
 from django.shortcuts import render,get_object_or_404
-
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import User,People,IdentificationType
@@ -35,7 +34,3 @@ def peopleFormResult(request):
         cellphone=cellphone,identification_type=identification_type,identification_number=identification_number)
         new_people.save()    
         return render(request,"users/peoplecreate.html")
-
-def createIdentificationNumber(request, identification_id):
-    return HttpResponse(f"vas a crear un tipo de identific∫acion{identification_id}")
-

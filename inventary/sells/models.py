@@ -16,6 +16,7 @@ class Sell(models.Model):
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
     payment_type = models.ForeignKey(PaymentType, on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
+    quantity=models.IntegerField()
 
     def __str__(self):
         return str(self.product)

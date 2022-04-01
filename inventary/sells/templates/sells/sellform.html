@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sells/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+   <div class="form-style-5">
+    <form action="{% url 'sells:sellform' %}" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend><h2 class="number">1</h2> Sell Product</legend>
+            <label for="client">Client:</label>
+            <input type="text" id="client_id" name="client" required> </input>
+        </br>
+            <label for="product">Product:</label>
+            <input type="text" id="priduct_id" name="product" required> </input>
+        </br>
+            <label for="payment_type">Payment Type:</label>
+            <input type="text" id="payment_type_id" name="payment_type" required> </input>
+        </br>
+            <label for="user">User:</label>
+            <input type="text" id="user_id" name="user" required> </input>
+        </br>
+        <label for="quantity">quantity:</label>
+        <input type="text" id="quantity_id" name="quantity" required> </input>
+        </br>
+        </fieldset>
+        <input type="submit" value="Sell product"></input>
+    </form>
+</div>
+    
+</body>
+</html>

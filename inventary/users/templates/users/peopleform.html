@@ -1,28 +1,43 @@
-<form action="{% url 'users:peopleFormResult' %}" method="post">
-{% csrf_token %}
-<fieldset>
-    <legend><h1> Create a new person</h1></legend>
-    <label for="first_name_label">First Name:</label>
-    <input type="text" id="first_name_id" name="first_name" required> </input>
-</br>
-    <label for="last_name_label">Last Name:</label>
-    <input type="text" id="last_name_id" name="last_name" required> </input>
-</br>
-    <label for="email_label">Email:</label>
-    <input type="text" id="email_id" name="email" required> </input>
-</br>
-    <label for="address_label">Address:</label>
-    <input type="text" id="address_id" name="address" required> </input>
-</br>
-    <label for="cellphone_label">Cellphone:</label>
-    <input type="text" id="cellphone_id" name="cellphone" required> </input>
-</br>
-<label for="identification_type_label">identification type:</label>
-<input type="text" id="identication_type_id" name="identification_type" required> </input>
-</br>
-    <label for="identification_number_label">identification number:</label>
-    <input type="text" id="identication_number_id" name="identification_number" required> </input>
-</br>    
-</fieldset>
-<input type="submit" value="Enviar"></input>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/peopleform.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-style-5">
+    <form action="{% url 'users:peopleFormResult' %}" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend><h1 class="number">1</h1> Create new people</legend>
+            <label for="first_name_label">First Name:</label>
+            <input type="text" id="first_name_id" name="first_name" required> </input>
+        </br>
+            <label for="last_name_label">Last Name:</label>
+            <input type="text" id="last_name_id" name="last_name" required> </input>
+        </br>
+            <label for="email_label">Email:</label>
+            <input type="text" id="email_id" name="email" required> </input>
+        </br>
+            <label for="address_label">Address:</label>
+            <input type="text" id="address_id" name="address" required> </input>
+        </br>
+            <label for="cellphone_label">Cellphone:</label>
+            <input type="text" id="cellphone_id" name="cellphone" required> </input>
+        </br>
+        <label for="identification_type_label">identification type:</label>
+        <input type="text" id="identication_type_id" name="identification_type" required> </input>
+        </br>
+            <label for="identification_number_label">identification number:</label>
+            <input type="text" id="identication_number_id" name="identification_number" required> </input>
+        </br>    
+        </fieldset>
+        <input type="submit" value="Send"></input>
+        </form>
+    </div>    
+</body>
+</html>
